@@ -45,7 +45,7 @@ const Home = () => {
     };
     const observerScroll = new IntersectionObserver(callback, opts);
 
-    observerScroll.observe(intersectTargetFeat1.current);
+    //observerScroll.observe(intersectTargetFeat1.current);
     observerScroll.observe(intersectTargetFeat2.current);
   }, []);
 
@@ -54,7 +54,7 @@ const Home = () => {
       <div className={styles.landing_hero}>
         <h1 className={styles.value_prop}>Concord Software and Executive Consulting</h1>
         <div>
-          <img className={styles.hero_illustration} src={image3} alt="" />
+          <img className={styles.hero_illustration} src={image1} alt="" />
         </div>
       </div>
       <div className={styles.wave_bottom_hero}>
@@ -70,16 +70,20 @@ const Home = () => {
             innovators who share the goal to bring modern and sensible engineering to solve
             life-impacting problems.
           </p>
+          <p>
+            Let us help you build your next React or Full Stack project, design your system, or
+            evaluate you technology or designs!
+          </p>
           <button className={styles.find_out_more_button} onClick={toAboutPage}>
-            Find Out More
+            See Who We Are
           </button>
         </div>
-        <img
+        {/*<img
           ref={intersectTargetFeat1}
           className={feat1Intersect ? styles.feature1_img : styles.feature1_img_none}
           src={image1}
           alt=""
-        />
+        />*/}
       </div>
       <div ref={intersectTargetFeat2} className={styles.feature2}>
         <img

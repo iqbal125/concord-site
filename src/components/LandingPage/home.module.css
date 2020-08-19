@@ -79,6 +79,10 @@
   justify-content: center;
 }
 
+.feature1_text > p {
+  font-size: 1.5em;
+}
+
 .feature2_text {
   flex-basis: 90%;
   padding: 2rem;
@@ -87,6 +91,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.feature2_text > p {
+  font-size: 1.2em;
 }
 
 /* Landing Page IMGs and Animations*/

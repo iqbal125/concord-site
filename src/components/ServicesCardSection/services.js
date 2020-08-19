@@ -12,13 +12,19 @@ export const servicesWeb = [
     id: 1,
     title: 'Front-End',
     icon: FcMultipleDevices,
-    description: ['React', 'Redux', 'Gatsby', 'HTML, CSS, Javascript', 'Auth0', 'D3']
+    description: ['React', 'Redux', 'Gatsby', 'HTML, CSS, Javascript', 'Auth0', 'GraphQl']
   },
   {
     id: 2,
     title: 'Server-Side',
     icon: FcFilingCabinet,
-    description: ['Node.js', 'Serverless AWS Lambda', 'Java', 'REST API Design', 'Python Django']
+    description: [
+      'Node.js/Express',
+      'Serverless AWS Lambda',
+      'Java',
+      'REST API Design',
+      'Python Django'
+    ]
   },
   {
     id: 3,
@@ -30,7 +36,7 @@ export const servicesWeb = [
     id: 4,
     title: 'Databases',
     icon: FcAcceptDatabase,
-    description: ['AWS RDS Setup', 'Postgres', 'DynamoDB', 'MySQL']
+    description: ['MongoDB/Mongoose', 'AWS RDS Setup', 'Postgres', 'DynamoDB', 'MySQL...']
   },
   {
     id: 5,
