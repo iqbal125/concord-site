@@ -13,29 +13,28 @@ import image12 from '../../../static/profiles/unnamed-1.jpg';
 import image13 from '../../../static/profiles/Willis.png';
 import image14 from '../../../static/profiles/StakutisHeadShot-oe3adcaxybu14a3dnu9a9o3e64m3ghnt3vbfyhes3c.jpg';
 
-export const profile1 = {
-  id: 1,
-  image: image14,
-  name: 'Chris Stakutis',
-  title: 'Founder and CEO',
-  description: `Chris Stakutis is the founder of Concord Software and a highly accomplished software architect, inventor, and product creator. With over 30 years designing software solutions, 24 patents, several published books, countless products. Chris is keenly aware of the challenges of modern software development and delivering solutions.
-Chris has a deep passion for cloud (AWS), Front-end (React focused), and all-things-backend including NoSQL, Node, Javascript, Lambda (FaaS), and Java; coupling those to solve real-world life-enhancing solutions.  
- Worcester Polytechnic Institute graduate ( high honors), Babson MBA .`
-};
-
 export const profiles = [
+  {
+    id: 111,
+    image: image14,
+    name: 'Chris Stakutis',
+    title: 'Founder and CEO',
+    description: `Chris Stakutis is the founder of Concord Software and a highly accomplished software architect, inventor, and product creator. With over 30 years designing software solutions, 24 patents, several published books, countless products. Chris is keenly aware of the challenges of modern software development and delivering solutions.
+        Chris has a deep passion for cloud (AWS), Front-end (React focused), and all-things-backend including NoSQL, Node, Javascript, Lambda (FaaS), and Java; coupling those to solve real-world life-enhancing solutions.  
+        Worcester Polytechnic Institute graduate ( high honors), Babson MBA .`
+  },
   {
     id: 1,
     image: image13,
-    name: 'Dr. Mark R. Willis, L.P.D',
-    title: 'Seasoned Pharmaceuticals and Medical Device professional',
+    name: 'Mark R. Willis',
+    title: 'Seasoned Medical Device professional',
     description:
       'Over 20 years’ experience in the industry. Experience leading global regulatory programs as both a project manager (PMP) and as a software quality engineer participant (certified SQE and Quality Auditor). Mark is currently working with global health authority agencies as well as the UN and USAID to conduct research for technological solutions like Blockchain and PCIDs to secure the pharmaceutical supply chain and is the author of “Counterfeit Pharmaceuticals: Are the U.S. Consumers Aware of the Potential Risks?”'
   },
   {
     id: 2,
     image: image7,
-    name: 'Jeff Lee, PMP',
+    name: 'Jeff Lee',
     title: 'Licensed PMP and Educator.',
     description:
       'Cornell University, Masters in Engineering, Electrical Engineering (Computer Engineering). Seasoned Project manager and IT manger - managing Medicaid Information System in Rhode Island. Recognized expertise in Unix, Windows Server, Microsoft SQL, and HTML. Jeff understands and meets his clients needs and works with system administrators and developers to deliver on those needs. He has a proven track record of building relationships and completing projects. Strong problem solver skills and methodical troubleshooter. Completing a project on time and on budget is the primary goal but how we reach the end point is nearly as important.'
@@ -44,7 +43,7 @@ export const profiles = [
     id: 3,
     image: image3,
     name: 'John Webster',
-    title: 'Industry Analyst, Author, Cloud Specialist.',
+    title: 'Industry Analyst, Cloud Specialist.',
     description: `John Webster's early IT background was developed in the mainframe leasing business. In 1990, he transitioned to IDC as an analyst, where he specialized in mainframe competitive analysis. Later, he founded the storage practice at Yankee Group. In 2002, he founded Data Mobility Group and later joined Evaluator Group in 2009 where he now specializes in cloud computing and AI. He has published primary research on hybrid cloud usage and IT as a Service. He also publishes a blog on Forbes.com called Inescapable Data.`
   },
   {
@@ -58,7 +57,7 @@ export const profiles = [
     id: 5,
     image: image1,
     name: 'Brian Moulton',
-    title: 'DevOps Master, Thought Leader, Cloud Deployment Expert',
+    title: 'Cloud Deployment Expert',
     description: `Experienced Manager with a demonstrated history of working in the marketing and advertising industry. Skilled in Linux System Administration, DevOps, Management, Software as a Service (SaaS), and Configuration Management. Through thought leadership, Brian has driven organizations to successful growth and execution.`
   },
   {
@@ -73,7 +72,7 @@ export const profiles = [
     id: 7,
     image: image2,
     name: 'Ozden Akyildiz',
-    title: 'Experienced Research and Development Specialist',
+    title: 'Research and Development Specialist',
     description: `Holds a Master of Science (MS) in Mechatronics, Robotics, and Automation Engineering from Worcester Polytechnic Institute, Rho Beta Epsilon Honor Society. Recognized for creating novel marketing applications, technology acquisition and product development processes as well as handling Software and Systems Engineering tasks in such projects. Extensively hands-on in Robotics, Controls, and Embedded Systems background.`
   },
   {

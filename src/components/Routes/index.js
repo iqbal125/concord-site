@@ -1,13 +1,12 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Router } from '@reach/router';
 import { navigate } from 'gatsby';
 import Profile from '../Profile';
-import AuthContext from '../../utils/auth_context';
+import SideBar from '../SideBar';
+
 import Auth from '../Authentication/auth';
 
 const Routes = () => {
-  const context = useContext(AuthContext);
-
   //check token expires time on private routes
   const isTokenValid = () => {
     let expiresAt = JSON.parse(localStorage.getItem('expiresIn'));
@@ -15,21 +14,23 @@ const Routes = () => {
   };
 
   const PrivateRoute = ({ component: Component, location, ...rest }) => {
-    let isAuthenticated = context.state.isAuthenticated;
-
-    if (!isAuthenticated && isTokenValid()) {
-      context.LogOut();
+    if (!isTokenValid()) {
       navigate('/app/login');
       return null;
+    } else {
+      return <Component {...rest} />;
     }
-    return <Component {...rest} />;
   };
 
   return (
-    <Router>
-      <PrivateRoute path="/app/profile" component={Profile} />
-      <Auth path="/app/login" />
-    </Router>
+    <>
+      <SideBar />
+      <Router>
+        {/*<PrivateRoute path="/app/profile" component={Profile} />*/}
+        <Profile path="/app/profile" />
+        <Auth path="/app/login" />
+      </Router>
+    </>
   );
 };
 

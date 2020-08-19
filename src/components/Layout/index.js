@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Footer from '../Footer';
 import Header from '../Header';
-import styles from './layout.module.css';
+import styles from './main_layout.module.css';
 import SEO from '../SEO';
+import GeneralContext from '../../utils/general_context';
+import SideBar from '../SideBar';
 
 const Layout = ({ props, title, description, children }) => {
+  const { sideState } = useContext(GeneralContext);
+  const { isOpen } = sideState;
+
   const seoData = {
     title,
     description
@@ -13,7 +18,8 @@ const Layout = ({ props, title, description, children }) => {
   return (
     <>
       <SEO seoData={seoData} />
-      <div className={styles.layout}>
+      {isOpen && <SideBar />}
+      <div className={isOpen ? styles.layout_fade : ''}>
         <Header props={{ ...props }} />
         <main>{children}</main>
         <Footer />

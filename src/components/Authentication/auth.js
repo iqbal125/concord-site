@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import styles from './auth.module.css';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import { navigate } from 'gatsby';
@@ -9,6 +9,11 @@ import axios from 'axios';
 const Auth = () => {
   const [isLoading, setLoading] = useState(false);
   const context = useContext(AuthContext);
+
+  useEffect(() => {
+    context.firebase.auth().signOut();
+    setTimeout(() => context.LogOut(), 200);
+  }, []);
 
   const uiConfig = {
     credentialHelper: 'none',
@@ -42,7 +47,7 @@ const Auth = () => {
 
     const sendtokenToServer = token => {
       axios
-        .post('http://localhost:3000/sendtoken', { token })
+        .post(`${process.env.GATSBY_SERVER_URL}/auth/sendtoken`, { token })
         .then(res => sendProfiletoContext(res.data))
         .catch(err => console.log(err));
     };
@@ -61,7 +66,7 @@ const Auth = () => {
       };
 
       context.saveUser(user);
-      navigate('/app/profile');
+      setTimeout(() => navigate('/app/profile'), 400);
     };
   };
 

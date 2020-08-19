@@ -1,5 +1,4 @@
 require('dotenv').config();
-const queries = require('./src/utils/algolia');
 
 module.exports = {
   siteMetadata: {
@@ -27,22 +26,7 @@ module.exports = {
       resolve: `gatsby-plugin-create-client-paths`,
       options: { prefixes: [`/app/*`] }
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/blog`,
-        name: `blog`
-      }
-    },
-    {
-      resolve: `gatsby-plugin-algolia`,
-      options: {
-        appId: process.env.GATSBY_ALGOLIA_APP_ID,
-        apiKey: process.env.GATSBY_ALGOLIA_ADMIN_KEY,
-        queries,
-        chunkSize: 10000
-      }
-    },
+
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -55,6 +39,12 @@ module.exports = {
           },
           `gatsby-remark-copy-linked-files`
         ]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true
       }
     },
     {

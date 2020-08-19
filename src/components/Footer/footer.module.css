@@ -4,6 +4,29 @@
   margin-top: 2em;
 }
 
+.footer_main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3em;
+  background-color: var(--primary-color);
+}
+
+@media screen and (max-width: 450px) {
+  .footer_main {
+    justify-content: center;
+  }
+
+  .right_footer {
+    margin-top: 3em;
+  }
+}
+
+.footer_wave {
+  width: 100%;
+  margin-bottom: -1em;
+}
+
 .footer_link {
   padding: 1em;
   color: white;
@@ -18,18 +41,6 @@
 .footer_legal {
   color: white;
   padding: 1em;
-}
-
-.footer_buffer {
-  height: 3em;
-  background-color: darkpurple;
-}
-
-.footer_main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 3em;
-  background-color: darkblue;
 }
 
 .right_footer {

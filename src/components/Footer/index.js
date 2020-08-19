@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from './footer.module.css';
 import { Link } from 'gatsby';
+import image7 from '../../../static/uploads/wave3.svg';
 
 const Footer = () => {
   return (
     <footer>
       <div className={styles.footer_wrapper}>
-        <div className={styles.footer_buffer}> </div>
+        <img className={styles.footer_wave} src={image7} alt="" />
         <div className={styles.footer_main}>
           <div className={styles.left_footer}>
             <small className={styles.footer_link}>One Concord Center </small>
@@ -15,12 +16,11 @@ const Footer = () => {
             <small className={styles.footer_link}>
               chris.stakutis@concordsoftwareandexecutiveconsulting.com
             </small>
-            <div className={styles.legal_section}>
-              <small className={styles.footer_legal}>Terms of Condition </small>
-              <small className={styles.footer_legal}>Privacy Policy</small>
-            </div>
           </div>
           <div className={styles.right_footer}>
+            <Link to="/projects">
+              <div className={styles.footer_link}>Projects</div>
+            </Link>
             <Link to="/about">
               <div className={styles.footer_link}>About </div>
             </Link>
@@ -29,9 +29,6 @@ const Footer = () => {
             </Link>
             <Link to="/contact">
               <div className={styles.footer_link}>Contact</div>
-            </Link>
-            <Link to="/blog">
-              <div className={styles.footer_link}>Blog</div>
             </Link>
           </div>
         </div>

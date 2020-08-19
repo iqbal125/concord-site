@@ -1,5 +1,5 @@
 .background {
-  background-color: antiquewhite;
+  background-color: var(--primary-color);
   height: 300px;
   width: 100%;
   max-width: 100%;
@@ -36,6 +36,13 @@ img {
 
 .email_phone > p {
   font-size: 1.2em;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 600px) {
+  .email_phone {
+    display: none;
+  }
 }
 
 .social_title {

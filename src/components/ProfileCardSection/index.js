@@ -1,10 +1,7 @@
 import React from 'react';
 import ProfileCard from '../ProfileCard';
-import ProfileCardFull from '../ProfileCardFull';
 import styles from './profilecardsection.module.css';
-import { profiles, profile1 } from './profileinfo.js';
-
-//add chris' profile card
+import { profiles } from './profileinfo.js';
 
 const ProfileCardSection = () => {
   return (
@@ -29,9 +26,6 @@ const ProfileCardSection = () => {
           companies through their knowledge — to improve the world.
         </p>
         <h4>Let the Revolution begin here. Cross the bridge with us.</h4>
-      </div>
-      <div className={styles.top_card}>
-        <ProfileCardFull profile={profile1} />
       </div>
       <div className={styles.card_section}>
         {profiles.map(profile => (
