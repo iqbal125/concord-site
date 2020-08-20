@@ -23,27 +23,30 @@ const ProfileCard = props => {
           <h2>{props.profile.title}</h2>
         </div>
       </div>
-      {trunc ? (
-        <Shiitake
-          lines={6}
-          throttleRate={200}
-          className={styles.card_desc}
-          overflowNode={
-            <div className={styles.read_more} onClick={setCard}>
-              Read More...
+      {/* Desktop Section */}
+      <div className={styles.trunc_section}>
+        {trunc ? (
+          <Shiitake
+            lines={6}
+            throttleRate={200}
+            className={styles.card_desc}
+            overflowNode={
+              <div className={styles.read_more} onClick={setCard}>
+                Read More...
+              </div>
+            }
+          >
+            {props.profile.description}
+          </Shiitake>
+        ) : (
+          <>
+            <div className={styles.card_desc}> {props.profile.description} </div>
+            <div className={styles.collapse} onClick={setCard}>
+              Collapse...
             </div>
-          }
-        >
-          {props.profile.description}
-        </Shiitake>
-      ) : (
-        <>
-          <div className={styles.card_desc}> {props.profile.description} </div>
-          <div className={styles.collapse} onClick={setCard}>
-            Collapse...
-          </div>
-        </>
-      )}
+          </>
+        )}
+      </div>
     </div>
   );
 };

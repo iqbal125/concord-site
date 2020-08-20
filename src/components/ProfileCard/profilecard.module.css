@@ -1,3 +1,4 @@
+/* Main Card */
 .card {
   display: flex;
   flex-direction: column;
@@ -5,17 +6,6 @@
   height: 28rem;
   width: 100%;
   border-bottom: 2em solid blue;
-}
-
-@media screen and (max-width: 768px) {
-  .card {
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 8px 0 rgba(128, 118, 118, 0.2);
-    height: 100%;
-    width: 100%;
-    border-bottom: 2em solid blue;
-  }
 }
 
 .card_full {
@@ -26,6 +16,7 @@
   width: 100%;
 }
 
+/* Top Row */
 .card_top_row {
   display: flex;
   margin-bottom: 1em;
@@ -41,19 +32,17 @@
   padding-right: 0.2rem;
 }
 
-@media screen and (min-width: 1400px) {
-  .card_title {
-    padding-left: 6em;
-    padding-right: 4em;
-  }
-}
+/* Second Row */
 
 .card_desc {
   padding: 1rem;
   margin-top: 1rem;
 }
 
-/* Truncation Action Buttons */
+/* Truncation  */
+.trunc_section {
+}
+
 .collapse {
   color: blue;
   cursor: pointer;
