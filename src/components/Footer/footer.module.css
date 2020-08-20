@@ -20,6 +20,10 @@
   .right_footer {
     margin-top: 3em;
   }
+
+  .footer_link_email {
+    display: none;
+  }
 }
 
 .footer_wave {
@@ -28,6 +32,11 @@
 }
 
 .footer_link {
+  padding: 1em;
+  color: white;
+}
+
+.footer_link_email {
   padding: 1em;
   color: white;
 }

@@ -13,7 +13,7 @@ const Footer = () => {
             <small className={styles.footer_link}>One Concord Center </small>
             <small className={styles.footer_link}>1 Main Street, Concord, MA 94520 </small>
             <small className={styles.footer_link}>1-978-764-3488 </small>
-            <small className={styles.footer_link}>
+            <small className={styles.footer_link_email}>
               chris.stakutis@concordsoftwareandexecutiveconsulting.com
             </small>
           </div>

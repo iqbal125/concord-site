@@ -16,11 +16,20 @@ const ProfileCard = props => {
 
   return (
     <div className={trunc ? styles.card : styles.card_full}>
+      {/* Desktop Section */}
       <div className={styles.card_top_row}>
         <img className={styles.card_image} src={props.profile.image} alt="" />
         <div className={styles.card_title}>
-          <h1>{props.profile.name}</h1>
-          <h2>{props.profile.title}</h2>
+          <h2>{props.profile.name}</h2>
+          <h3>{props.profile.title}</h3>
+        </div>
+      </div>
+      {/* Mobile Section */}
+      <div className={styles.card_top_row_mobile}>
+        <img className={styles.card_image} src={props.profile.image} alt="" />
+        <div className={styles.card_title}>
+          <h2>{props.profile.name}</h2>
+          <h3>{props.profile.title}</h3>
         </div>
       </div>
       {/* Desktop Section */}
