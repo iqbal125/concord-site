@@ -97,6 +97,32 @@
   font-size: 1.2em;
 }
 
+@media screen and (min-width: 1600px) {
+  .feature1_text_full_hd {
+    margin: 2rem;
+    padding: 2rem;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .value_prop {
+    display: none;
+  }
+
+  .feature1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1599px) {
+  .feature1_text_full_hd {
+    display: none !important;
+  }
+}
+
 /* Landing Page IMGs and Animations*/
 
 .feature1_img {

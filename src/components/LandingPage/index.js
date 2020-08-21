@@ -53,6 +53,23 @@ const Home = () => {
     <div>
       <div className={styles.landing_hero}>
         <h1 className={styles.value_prop}>Concord Software and Executive Consulting</h1>
+        <div className={styles.feature1_text_full_hd}>
+          <h1>Concord Software and Executive Consulting</h1>
+          <h2>Industry Leading Tech Experts</h2>
+          <p>
+            We are a consortium of accomplished business executives, software architects, technical
+            leaders, analysts, health & life science professionals, educators, investors, and other
+            innovators who share the goal to bring modern and sensible engineering to solve
+            life-impacting problems.
+          </p>
+          <p>
+            Let us help you build your next React or Full Stack project, design your system, or
+            evaluate you technology or designs!
+          </p>
+          <button className={styles.find_out_more_button} onClick={toAboutPage}>
+            See Who We Are
+          </button>
+        </div>
         <div>
           <img className={styles.hero_illustration} src={image1} alt="" />
         </div>
